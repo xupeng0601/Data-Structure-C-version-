@@ -22,9 +22,6 @@ double f2(int n,double a[],double x);
 
 int main(){
 	
-	printf("%d\n",CLK_TCK);
-	
-	
 	//测试
 	int N = 100;   //多项式项数 
 	double a[101];   //多项式系数集合 

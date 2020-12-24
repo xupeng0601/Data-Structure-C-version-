@@ -109,3 +109,9 @@ int MaxSum3( int List[], int N ){
     return DivideAndConquer( List, 0, N-1 );
 }
 
+
+//Ëã·¨ËÄ
+int MaxSum4(){
+	
+} 
+
