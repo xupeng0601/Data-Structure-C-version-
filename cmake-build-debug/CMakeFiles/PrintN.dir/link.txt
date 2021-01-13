@@ -1,3 +1,0 @@
-"D:\software\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\PrintN.dir/objects.a
-D:\MINGW\bin\ar.exe cr CMakeFiles\PrintN.dir/objects.a @CMakeFiles\PrintN.dir\objects1.rsp
-D:\MINGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\PrintN.dir/objects.a -Wl,--no-whole-archive  -o PrintN.exe -Wl,--out-implib,libPrintN.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PrintN.dir\linklibs.rsp
