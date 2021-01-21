@@ -5,7 +5,7 @@
 #include <math.h>
 #include <time.h>
 
-#define COUNT 1e7  /*被测函数运行次数*/
+#define COUNT 1e6  /*被测函数运行次数*/
 
 clock_t start, stop;
 double duration;  /*记录被测函数运行时间，单位为秒*/
@@ -24,14 +24,16 @@ int main(){
         a[i] = 1.0/i;
     }
 
-    double res = 0.0;
+    double res = 0.0;  //计算结果
     start = clock();
     for (int i = 1; i < COUNT; ++i) {
        res = f(x, a, n);
     }
     stop = clock();
     duration = (double)(stop - start)/CLK_TCK/COUNT;
-    printf("duration: %6.2e\n",duration);
+    printf("逐项累加法\n");
+    printf("计算结果为：%lf\n",res);
+    printf("单次计算时间为: %6.2e\n",duration);
 
     start = clock();
     for (int i = 1; i < COUNT; ++i) {
@@ -39,7 +41,9 @@ int main(){
     }
     stop = clock();
     duration = (double)(stop - start)/CLK_TCK/COUNT;
-    printf("duration: %6.2e\n",duration);
+    printf("\n秦九韶算法\n");
+    printf("计算结果为：%lf\n",res);
+    printf("单次计算时间为: %6.2e\n",duration);
 
    return 0;
 

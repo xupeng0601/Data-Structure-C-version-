@@ -11,9 +11,9 @@ void Print(int N);
 void PrintDG(int N);
 
 int main(){
-    int NUM = 10;
-    Print(NUM);
-//	PrintDG(NUM);
+    int NUM = 1e7;
+//    Print(NUM);
+	PrintDG(NUM);
     return 0;
 }
 
