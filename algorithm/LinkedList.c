@@ -5,7 +5,7 @@
 #include <malloc.h>
 #include <stdio.h>
 
-//å•é“¾è¡¨èŠ‚ç‚¹æè¿°
+//µ¥Á´±í½ÚµãÃèÊö
 typedef struct LNode{
      int data;
      struct LNode *next;
@@ -16,18 +16,18 @@ LinkList TailInsert();
 LNode* GetElem(LinkList L,int i);
 
 int main() {
-
+    TailInsert();
     return 0;
 }
 /*
- *å¤´æ’æ³•å»ºç«‹å•é“¾è¡¨
+ *Í·²å·¨½¨Á¢µ¥Á´±í
  * */
 LinkList HeadInsert(){
-    LNode *s; int x;
-    LinkList L = (LinkList)malloc(sizeof(LinkList)); //åˆ›å»ºé“¾è¡¨
-    L->next = NULL;                                  // åˆå§‹åŒ–ç©ºé“¾è¡¨
-    while (x!=10){          //è¾“å…¥åˆ°10ç»“æŸå¾ªç¯
-        scanf("%d",&x);
+    LNode *s; int x = 1;
+    LinkList L = (LinkList)malloc(sizeof(LinkList)); //´´½¨Á´±í
+    L->next = NULL;                                  // ³õÊ¼»¯¿ÕÁ´±í
+    while (x++!=10){          //ÊäÈëµ½10½áÊøÑ­»·
+//        scanf("%d",&x);
         s=(LNode*)malloc(sizeof(LNode));
         s->next = L->next;
         s->data = x;
@@ -37,7 +37,7 @@ LinkList HeadInsert(){
 }
 
 /*
- * å°¾æ’æ³•å»ºç«‹å•é“¾è¡¨
+ * Î²²å·¨½¨Á¢µ¥Á´±í
  * */
 LinkList TailInsert(){
     LinkList L = (LinkList)malloc(sizeof (LinkList));
@@ -50,11 +50,16 @@ LinkList TailInsert(){
         r = s;
     }
     r->next =NULL;
+    LNode *p=L->next;
+    while (p!=NULL){
+        printf("%d\n",p->data);
+        p=p->next;
+    }
     return L;
 }
 
 /*
- * æŒ‰åºå·æŸ¥æ‰¾èŠ‚ç‚¹å€¼
+ * °´ĞòºÅ²éÕÒ½ÚµãÖµ
  * */
 LNode* GetElem(LinkList L,int i){
     int count = 0;
